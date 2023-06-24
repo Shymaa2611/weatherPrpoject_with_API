@@ -14,10 +14,15 @@ def weatherView(request):
          loc=location.objects.all()
          clou=cloud_cover.objects.all()
          response={
-            "location":list(loc.values()),
+            "":list(loc.values()),
             "preciption":list(precipitn.values()),
             "pressure":list(press.values()),
             "temperature":list(press.values()),
+             "humidity":list(hum.values()),
+             "cloud_cover":list(clou.values()),
+             "wind":list(win.values()),
+             "max":list(maxv.values()),
+             "temperature":list(temp.values())
              
         }
          return JsonResponse(response)
